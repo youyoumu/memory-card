@@ -1,5 +1,6 @@
 export default class AnilistApi {
   constructor(id = 21034) {
+    this.id = id
     this.data = null
     this.query = `
 query ($id: Int) { # Define which variables will be used in the query (id)
@@ -56,7 +57,7 @@ query ($id: Int) { # Define which variables will be used in the query (id)
   }
 
   handleData(data, obj) {
-    obj.data = data.data.Media
+    obj.data = data
   }
 
   handleError(error) {

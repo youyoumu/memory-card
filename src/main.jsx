@@ -9,9 +9,10 @@ const anilistApi = new AnilistApi()
 async function fetchAndRender() {
   await anilistApi.fetchData()
   anilistApi.logData()
+  const characters = anilistApi.data.data.Media.characters.nodes
   root.render(
     <React.StrictMode>
-      <MemoryCard data={anilistApi.data} />
+      <MemoryCard characters={characters} />
     </React.StrictMode>
   )
 }

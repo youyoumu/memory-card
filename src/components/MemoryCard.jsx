@@ -1,8 +1,8 @@
 import Card from './Card'
 
-export default function MemoryCard({ data }) {
+export default function MemoryCard({ characters }) {
   const Cards = []
-  data.characters.nodes.forEach((character) => {
+  characters.forEach((character) => {
     Cards.push(
       <Card
         name={character.name.full}
