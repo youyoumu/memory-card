@@ -35,10 +35,10 @@ export default function MemoryCard({ characters }) {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <h1 className="text-5xl">Memory Card</h1>
-      <div>
-        <p>Score: {score}</p>
-        <p>High Score: {highScore}</p>
+      <h1 className="text-5xl mb-4">Memory Card</h1>
+      <div className="flex gap-4 text-2xl font-bold mb-4">
+        <div>Score: {score}</div>
+        <div>High Score: {highScore}</div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
         {shuffledCards}
