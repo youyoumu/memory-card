@@ -36,7 +36,9 @@ async function fetchAndRender(resetCallback) {
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <div>loading..</div>
+    <div className="h-screen w-screen flex justify-center items-center">
+      <div className="text-3xl text-slate-500">Loading..</div>
+    </div>
   </React.StrictMode>
 )
 
