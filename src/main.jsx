@@ -3,8 +3,24 @@ import ReactDOM from 'react-dom/client'
 import MemoryCard from './components/MemoryCard.jsx'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import AnilistApi from './anilistApi.js'
+const anilistApi = new AnilistApi()
+
+async function fetchAndRender() {
+  await anilistApi.fetchData()
+  anilistApi.logData()
+  root.render(
+    <React.StrictMode>
+      <MemoryCard />
+    </React.StrictMode>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
   <React.StrictMode>
-    <MemoryCard />
+    <div>loading..</div>
   </React.StrictMode>
 )
+
+fetchAndRender()
