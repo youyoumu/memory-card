@@ -35,7 +35,7 @@ export default function MemoryCard({ characters }) {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <h1 className="text-5xl mb-4">Memory Card</h1>
+      <h1 className="text-5xl mb-4 mt-2">Memory Card</h1>
       <div className="flex gap-4 text-2xl font-bold mb-4">
         <div>Score: {score}</div>
         <div>High Score: {highScore}</div>
