@@ -57,7 +57,6 @@ query ($id: Int) { # Define which variables will be used in the query (id)
 
   handleData(data, obj) {
     obj.data = data.data.Media
-    console.log(obj.data)
   }
 
   handleError(error) {

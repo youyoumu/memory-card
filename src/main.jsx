@@ -11,7 +11,7 @@ async function fetchAndRender() {
   anilistApi.logData()
   root.render(
     <React.StrictMode>
-      <MemoryCard />
+      <MemoryCard data={anilistApi.data} />
     </React.StrictMode>
   )
 }
