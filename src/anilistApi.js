@@ -64,8 +64,4 @@ query ($id: Int) { # Define which variables will be used in the query (id)
     alert('Error, check console')
     console.error(error)
   }
-
-  logData() {
-    console.log(this.data)
-  }
 }

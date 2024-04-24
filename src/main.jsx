@@ -8,7 +8,9 @@ let anilistApi = new AnilistApi()
 
 async function fetchAndRender(resetCallback) {
   await anilistApi.fetchData()
-  anilistApi.logData()
+  if (!anilistApi.data) {
+    return
+  }
   const characters = anilistApi.data.data.Media.characters.nodes
   root.render(
     <React.StrictMode>
