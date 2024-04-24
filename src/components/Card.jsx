@@ -1,6 +1,9 @@
-export default function Card({ name, imageUrl }) {
+export default function Card({ name, imageUrl, id, clickCallback }) {
   return (
-    <div className="card card-compact w-56 bg-base-100 shadow-xl">
+    <div
+      className="card card-compact w-56 bg-base-100 shadow-xl"
+      onClick={() => clickCallback(id)}
+    >
       <figure>
         <img src={imageUrl} alt={name} />
       </figure>
