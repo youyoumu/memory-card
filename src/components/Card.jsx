@@ -1,6 +1,6 @@
 export default function Card({ name, imageUrl }) {
   return (
-    <div className="card w-56 bg-base-100 shadow-xl">
+    <div className="card card-compact w-56 bg-base-100 shadow-xl">
       <figure>
         <img src={imageUrl} alt={name} />
       </figure>

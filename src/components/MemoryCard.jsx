@@ -16,7 +16,9 @@ export default function MemoryCard({ data }) {
     <div className="flex flex-col justify-center items-center">
       <h1 className="text-5xl">Memory Card</h1>
       <div>scoreboard</div>
-      <div>{Cards}</div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
+        {Cards}
+      </div>
     </div>
   )
 }
